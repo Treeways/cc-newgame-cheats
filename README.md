@@ -3,6 +3,8 @@ A little modification of [CrossCodeCheats](https://github.com/ZeikJT/CrossCodeCh
 
 # Install
 
-This mod requires [CCLoader](https://github.com/CCDirectLink/CCLoader) which you can either install manually or use the [CCLoader installer](https://github.com/CCDirectLink/ccloader-installer).
+This mod requires [CCLoader](https://github.com/CCDirectLink/CCLoader). Download and install this first.
 
-Once you have CCLoader installed, plop the the downloaded folder into `CrossCode/assets/mods` to install it!
+Then, grab this mod's [latest release](https://github.com/Treeways/cc-newgame-cheats/releases) and place it into `CrossCode/assets/mods` to install it!
+
+You can also download this mod with [CCModManager](https://github.com/CCDirectLink/CCModManager).
