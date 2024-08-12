@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"title": "New Game+ Cheats",
 	"description": "Adds trophy-point-free NG+ option toggles to CrossCode.",
-        "repository": "https://github.com/Hsifnus/cc-newgame-cheats",
+        "repository": "https://github.com/Treeways/cc-newgame-cheats",
         "tags": ["cheats"],
         "icons": {
                 "24": "icon.png"
