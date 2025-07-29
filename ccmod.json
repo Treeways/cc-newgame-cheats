@@ -11,7 +11,8 @@
         "authors": ["Hsifnus", "ZeikJT"],
 	"dependencies": {
                 "ccloader": "^2.11.0",
-		"crosscode": ">=1.2"
+		"crosscode": ">=1.2",
+                "nax-ccuilib": ">=1.5.2"
 	},
         "postload": "cheats.js"
 }

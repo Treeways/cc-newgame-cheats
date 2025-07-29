@@ -280,33 +280,18 @@ ig.module("ng-cheats-gui").requires("game.feature.gui.screen.title-screen", "gam
 			return this.parent.apply(this, arguments);
 		},
 	});
-	sc.PauseScreenGui.inject({
-		ngCheatsButton: null,
-		init() {
-			this.parent();
-			// Create our new Cheats menu button.
-			this.ngCheatsButton = new sc.ButtonGui(ig.lang.get("sc.ng-cheats.title"), sc.BUTTON_DEFAULT_WIDTH);
-			this.ngCheatsButton.setAlign(ig.GUI_ALIGN.X_RIGHT, ig.GUI_ALIGN.Y_BOTTOM);
-			this.ngCheatsButton.onButtonPress = () => {
-				// What menu should be entered when clicked.
-				sc.menu.setDirectMode(true, sc.MENU_SUBMENU.NG_CHEATS);
-				sc.model.enterMenu(true);
-			};
-			this.insertChildGui(this.ngCheatsButton);
-		},
-		updateButtons() {
-			this.removeChildGui(this.ngCheatsButton);
-			this.parent();
-			this.addChildGui(this.ngCheatsButton);
 
-			// Get the first button in the first column so we can position our button above it.
-			const firstButtonHook = this.buttonGroup.elements[0][0].hook;
-			// Position our new Cheats button above the current ones.
-			this.ngCheatsButton.setPos(firstButtonHook.pos.x, firstButtonHook.pos.y + firstButtonHook.size.y + 16);
-			// Set it to be first in keyboard order, bump the others down.
-			this.buttonGroup.insertFocusGui(this.ngCheatsButton, 0, 0);
+
+	nax.ccuilib.pauseScreen.addButton({
+		text: '',
+		onPress() {
+			sc.menu.setDirectMode(true, sc.MENU_SUBMENU.NG_CHEATS);
+			sc.model.enterMenu(true);
 		},
-	});
+		onShow(button) {
+			button.setText(ig.lang.get("sc.ng-cheats.title"), true)
+		},
+	})
 	// END: Cheats GUI
 });
 })();
